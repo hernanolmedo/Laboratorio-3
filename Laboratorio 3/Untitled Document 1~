@@ -1,0 +1,13 @@
+git config --global user.name "Your Name"
+git config --global user.email "youremail@domain.com"
+
+git add Laboratorio...
+git commit -m "msj"
+git push origin master
+
+
+Fuente:
+
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04
+
+
