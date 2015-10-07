@@ -1,0 +1,21 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {spanish}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\IeC {\'I}NDICE DE FIGURAS}{iv}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\IeC {\'I}NDICE DE CUADROS}{v}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{CAP\IeC {\'I}TULO 1. \hspace {0.2cm} \uppercase {Introducci\IeC {\'o}n}}{7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{CAP\IeC {\'I}TULO 2. \hspace {0.2cm} \uppercase {Marco Te\IeC {\'o}rico}}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{2.1 \hspace {0.5cm}\uppercase {Terminolog\IeC {\'\i }a}}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{CAP\IeC {\'I}TULO 3. \hspace {0.2cm} \uppercase {Desarrollo}}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{CAP\IeC {\'I}TULO 4. \hspace {0.2cm} \uppercase {Discusiones de los resultados}}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{CAP\IeC {\'I}TULO 5. \hspace {0.2cm} \uppercase {Conclusi\IeC {\'o}n}}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{CAP\IeC {\'I}TULO 6. \hspace {0.2cm} \uppercase {Bibliograf\IeC {\'\i }a}}{17}

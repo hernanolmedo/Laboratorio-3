@@ -1,0 +1,51 @@
+\documentclass{memoria}
+
+
+\begin{document}
+	\portada{Laboratorio 2 Organización de Computadores: Caché}{Hernán Olmedo}{Profesores: \\Felipe Garay,\\Erika Rosas,\\Nicolás Hidalgo\\Ayudante: \\Ian Mejias}{\today}
+	\indices
+	
+	\capitulo{Introducción}{\bigskip\bigskip
+		Los computadores hoy en día juegan un papel preponderante en el desarrollo tecnológico y pese a su rápida evolución, las exigencias no se quedan atrás con el paso del tiempo y cada vez son más las áreas que exigen procesar grandes cantidades de datos en un tiempo reducido. Por ejemplo procesar los datos de una sonda espacial, áreas como las finanzas, la edición de gráficos, entre otras. Una de las partes claves en la rapidez de respuesta de un computador es el manejo de la memoria, en este informe trataremos la memoria de acceso rápido llamada caché, las configuraciones que esta puede tener y como esto influye en la rapidez del computador. \cite{enunciado} \bigskip
+		
+		En este laboratorio se solicita implementar 2 algoritmos de ordenamiento, uno iterativo y otro recursivo a elección. Estos deben ser implementados en lenguaje ensamblador para el procesador MIPS utilizando el simulador MARS, cada algoritmo constituye un programa y cada programa debe ser capaz de abrir un archivo de texto que contiene un número por línea, pasar estos números a memoria, ordenarlos y finalmente crear un nuevo archivo de texto con los números ordenados. Utilizando la herramienta Data Cache Simulator de MARS se deben probar las distintas configuraciones de caché y analizar los resultados.\bigskip
+		
+		Los algoritmos a implementar serán el Quicksort como recursivo y el Bubble Sort como iterativo. Para la implementación de estos algoritmos se utilizó el stack de MIPS para ordenar allí los números. Utilizando la herramienta Data Cache Simulator se obtienen los resultados que serán analizados en este informe.\bigskip
+		
+		Con la realización de este trabajo se busca comprobar empíricamente la materia vista en clases respecto a las configuraciones del cache, además de mejorar nuestras habilidades para programar en un lenguaje de muy bajo nivel como lo es el del procesador MIPS.\bigskip
+		
+		En el capítulo 2 se describen las configuraciones que puede tener el caché así como también conceptos claves en el entendimiento del cache y los algoritmos de ordenamiento. En el capítulo 3 se explica como fue llevado a cabo el desarrollo del trabajo. En el capítulo 4 se discuten los resultados obtenidos y se explican de acuerdo a la materia vista en clases y a investigación personal
+		}
+	
+	\capitulo{Marco Teórico}{\bigskip\bigskip
+		El caché o memoria de acceso directo es una memoria de menor tamaño que la principal y es utilizada por el procesador para acceder rápidamente a los datos, los datos que se cargan en el caché son los que tienen mayor probabilidad de ser utilizados por el procesador. Así se evita la solicitud de datos directamente con la memoria principal ya que esta al tener un gran tamaño dificulta el acceso a los datos.\bigskip
+		\seccion{Terminología}{\bigskip
+			Bloque: unidad mínima de almacenamiento en cache\bigskip
+			
+			Hit	: palabra buscada que pertenece a bloque presente en cache\bigskip
+			
+			Miss	: palabra buscada que pertenece a bloque ausente de cache\bigskip
+			
+			Tasa de hit	: fracción de referencias a memoria que producen aciertos\bigskip
+			
+			Tasa de miss	: 1 - (tasa de hit)\bigskip
+			
+			Tiempo de hit	: tiempo en leer un dato del cache\bigskip
+			
+			Castigo por miss   : tiempo para reemplazar un bloque en el nivel superior por uno del nivel inferior más el tiempo de entrega al procesador\bigskip\bigskip
+			}
+		
+		}
+	
+	\capitulo{Desarrollo}{\bigskip\bigskip
+		}
+	\capitulo{Discusiones de los resultados}{\bigskip\bigskip
+	}
+
+	\capitulo{Conclusión}{\bigskip\bigskip\bigskip
+		}
+
+	\bibliografiasincita
+	
+	
+\end{document}

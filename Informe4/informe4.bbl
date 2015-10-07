@@ -1,0 +1,37 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{enunciado}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Garay}{G.}%
+     {Felipe}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GF1}
+  \strng{fullhash}{GF1}
+  \field{sortinit}{G}
+  \field{title}{Laboratorio 3 Organización de Computadores: Pipeline}
+  \field{year}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
