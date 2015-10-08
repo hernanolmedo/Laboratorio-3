@@ -17,24 +17,23 @@
 		En el capítulo 2 se describen las configuraciones que puede tener el caché así como también conceptos claves en el entendimiento del cache y los algoritmos de ordenamiento. En el capítulo 3 se explica como fue llevado a cabo el desarrollo del trabajo. En el capítulo 4 se discuten los resultados obtenidos y se explican de acuerdo a la materia vista en clases y a investigación personal
 		}
 	
-	\capitulo{Marco Teórico}{\bigskip\bigskip
-		El caché o memoria de acceso directo es una memoria de menor tamaño que la principal y es utilizada por el procesador para acceder rápidamente a los datos, los datos que se cargan en el caché son los que tienen mayor probabilidad de ser utilizados por el procesador. Así se evita la solicitud de datos directamente con la memoria principal ya que esta al tener un gran tamaño dificulta el acceso a los datos.\bigskip
-		\seccion{Terminología}{\bigskip
-			Bloque: unidad mínima de almacenamiento en cache\bigskip
-			
-			Hit	: palabra buscada que pertenece a bloque presente en cache\bigskip
-			
-			Miss	: palabra buscada que pertenece a bloque ausente de cache\bigskip
-			
-			Tasa de hit	: fracción de referencias a memoria que producen aciertos\bigskip
-			
-			Tasa de miss	: 1 - (tasa de hit)\bigskip
-			
-			Tiempo de hit	: tiempo en leer un dato del cache\bigskip
-			
-			Castigo por miss   : tiempo para reemplazar un bloque en el nivel superior por uno del nivel inferior más el tiempo de entrega al procesador\bigskip\bigskip
+	\capitulo{Marco Teórico}{\bigskip\bigskip%sobre el pipeline, etapas del pipeline de mips y hazards
+		El pipeline es un técnica de implementación en la cual se traslapan las instrucciones durante la ejecución.\bigskip
+		\seccion{Etapas del Pipeline}{\bigskip
+			En MIPS se tienen 5 etapas:\bigskip\bigskip
+			IF: En esta etapa se busca la instrucción en memoria.\bigskip\bigskip
+			ID: Se leen los registros mientras se decodifica la instrucción.\bigskip\bigskip
+			EX: Se ejecuta la operación de la instrucción o bien se calcula una dirección de memoria.\bigskip\bigskip
+			MEM: En esta etapa se accede a un operando que se encuentra en memoria.\bigskip\bigskip
+			WB: Finalmente se escriben los resultados en un registro.\bigskip\bigskip
+
+			\bigskip\bigskip
 			}
-		
+		\seccion{Hazards}{\bigskip
+			Los hazards son obstáculos que se producen durante la ejecución del pipeline cuando una instrucción no se puede ejecutar en el siguiente ciclo de reloj. Existen 3 tipos de hazards:\bigskip\bigskip
+			
+			\bigskip\bigskip
+			}					
 		}
 	
 	\capitulo{Desarrollo}{\bigskip\bigskip

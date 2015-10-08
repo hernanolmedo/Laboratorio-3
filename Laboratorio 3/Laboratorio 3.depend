@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1444322155 source:/home/max/Documents/Laboratorio-3/Laboratorio 3/main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+

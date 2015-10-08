@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <unistd.h>
+
 
 double tanh(double x){
     double x3=x*x*x;
@@ -13,26 +14,52 @@ double tanh(double x){
     double x17=x*x*x*x*x*x*x*x*x*x*x*x*x*x*x;
     double x19=x*x*x*x*x*x*x*x*x*x*x*x*x*x*x*x*x;
     double sum=x-0.333333*x3+0.133333*x5-0.053968*x7+0.021869*x9-0.00886325*x11+0.00359216*x13-0.00145389*x15+0.000604682*x17-0.00005291*x19;
-    //double sum=x-0.333333*x3+0.133333*x5-0.053968*x7;
     return sum;
 }
 
-double factorial(double x){
-    double i=x;
-    while(i!=1){
-        x*=i-1;
-        i--;
-    }
-    return x;
-}
+int main(int argc,char **argv){
+    extern char *optarg;
+//    extern int *optind;
+    int c,i,err=0;
+    int nflag=0;
+    char *nname="VALORES_N";
+    char usage[]="usage: %s -n \"0 VALORES\"\n";
 
-int main()
-{   double nB,n;
-    for(n=6.0;n<=10.0;n++){
-        nB=(pow(4.0,n)*(pow(4.0,n)-1))/(factorial(2.0*n));
-        printf("\n%f = %f\n",n,nB);
+    while((c=getopt(argc,argv,"n:"))!=-1){
+        switch(c){
+            case 'n':
+                nflag=1;
+                nname=optarg;
+                break;
+            case '?':
+                err=1;
+                break;
+        }
+        if(nflag==0){
+            fprintf(stderr,"%s: missing -n option\n",argv[0]);
+            fprintf(stderr,usage,argv[0]);
+            exit(1);
+        }
+        if(optind<argc){
+            for(;optind<argc;optind++){
+                printf("Argumento no permitido:\"%s\"\n",argv[optind]);
+                printf("La sintaxis es: -n \"VALOR X\"\n");
+                exit(1);
+                }
+            }
+        if(err){
+            fprintf(stderr,usage,argv[0]);
+            exit(1);
+        }
+
+        for(i = 0; i < 1000000; i++){
+            tanh(atof(nname));
+        }
+
+        printf("\n\n");
+        printf("tanh(%s)=%f\n",nname,tanh(atof(nname)));
+        exit(0);
     }
-    printf("\n%f\n",tanh(1.3));
     return 0;
 }
 

@@ -10,7 +10,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{CAP\IeC {\'I}TULO 2. \hspace {0.2cm} \uppercase {Marco Te\IeC {\'o}rico}}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{2.1 \hspace {0.5cm}\uppercase {Terminolog\IeC {\'\i }a}}{9}
+\contentsline {section}{2.1 \hspace {0.5cm}\uppercase {Etapas del Pipeline}}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{2.2 \hspace {0.5cm}\uppercase {Hazards}}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{CAP\IeC {\'I}TULO 3. \hspace {0.2cm} \uppercase {Desarrollo}}{11}
 \defcounter {refsection}{0}\relax 
