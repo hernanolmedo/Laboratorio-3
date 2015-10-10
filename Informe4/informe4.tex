@@ -29,14 +29,18 @@
 
 			\bigskip\bigskip
 			}
-		\seccion{Hazards}{\bigskip
-			Los hazards son obstáculos que se producen durante la ejecución del pipeline cuando una instrucción no se puede ejecutar en el siguiente ciclo de reloj. Existen 3 tipos de hazards:\bigskip\bigskip
-			
+		\seccion{Hazard}{\bigskip
+			Los hazard son obstáculos que se producen durante la ejecución del pipeline cuando una instrucción no se puede ejecutar en el siguiente ciclo de reloj. Existen 3 tipos de hazard:\bigskip\bigskip
+			Hazard estructurales: Se producen cuando el hardware no puede soportar una combinación de instrucciones en un ciclo de reloj.\bigskip\bigskip
+			Hazard de datos: Se producen cuando una instrucción requiere de datos que aún no están disponibles.\bigskip\bigskip
+			Hazard de control: Se producen cuando se busca una instrucción pero esta no era la que se necesitaba ejecutar, el flujo  de ejecución de las instrucciones cambia.\bigskip\bigskip
 			\bigskip\bigskip
-			}					
+			}
+			Forwarding: Método para resolver hazard de datos que mediante la utilización de buffers puede hacer uso de los datos sin  esperar a que esten en los registros o en memoria.
 		}
 	
 	\capitulo{Desarrollo}{\bigskip\bigskip
+	
 		}
 	\capitulo{Discusiones de los resultados}{\bigskip\bigskip
 	}
