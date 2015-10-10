@@ -5,15 +5,15 @@
 //Recibe un double correspondiente al número al cual se le desea calcular la tanh
 //Retorna un double que viene a ser la aproximación de la tanh de x
 double tanh(double x){
-    double x3=x*x*x;
-    double x5=x3*x*x;
-    double x7=x5*x*x;
-    double x9=x7*x*x;
-    double x11=x9*x*x;
-    double x13=x11*x*x;
-    double x15=x13*x*x;
-    double x17=x15*x*x;
-    double x19=x17*x*x;
+    double x3=x*(x*x);
+    double x5=x3*(x*x);
+    double x7=x5*(x*x);
+    double x9=x7*(x*x);
+    double x11=x9*(x*x);
+    double x13=x11*(x*x);
+    double x15=x13*(x*x);
+    double x17=x15*(x*x);
+    double x19=x17*(x*x);
     double sum=x-0.333333*x3+0.133333*x5-0.053968*x7+0.021869*x9-0.00886325*x11+0.00359216*x13-0.00145389*x15+0.000604682*x17-0.00005291*x19;
     return sum;
 }
