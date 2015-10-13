@@ -1,61 +1,14 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: informe4.aux
-The style file: biblatex.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: informe4-blx.bib
-Database file #2: bibliografia.bib
-Biblatex version: 2.8
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 2 entries,
-            6047 wiz_defined-function locations,
-            1133 strings with 8171 characters,
-and the built_in function-call counts, 3768 in all, are:
-= -- 147
-> -- 136
-< -- 26
-+ -- 56
-- -- 48
-* -- 170
-:= -- 432
-add.period$ -- 0
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 34
-cite$ -- 2
-duplicate$ -- 310
-empty$ -- 379
-format.name$ -- 48
-if$ -- 860
-int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 0
-newline$ -- 37
-num.names$ -- 41
-pop$ -- 366
-preamble$ -- 1
-purify$ -- 10
-quote$ -- 0
-skip$ -- 231
-stack$ -- 0
-substring$ -- 130
-swap$ -- 84
-text.length$ -- 41
-text.prefix$ -- 1
-top$ -- 1
-type$ -- 64
-warning$ -- 0
-while$ -- 66
-width$ -- 0
-write$ -- 34
+[0] Config.pm:324> INFO - This is Biber 2.1
+[0] Config.pm:327> INFO - Logfile is 'informe4.blg'
+[88] biber-MSWIN:273> INFO - === %a %b %e, %Y, %H:%M:%S
+[88] Biber.pm:333> INFO - Reading 'informe4.bcf'
+[527] Biber.pm:645> INFO - Found 3 citekeys in bib section 0
+[559] Biber.pm:2977> INFO - Processing section 0
+[588] Biber.pm:3115> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[601] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[605] bibtex.pm:895> INFO - Found BibTeX data source 'bibliografia.bib'
+[749] UCollate.pm:66> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[749] UCollate.pm:66> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[750] Biber.pm:2854> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'es-ES'
+[756] bbl.pm:505> INFO - Writing 'informe4.bbl' with encoding 'UTF-8'
+[774] bbl.pm:596> INFO - Output to informe4.bbl

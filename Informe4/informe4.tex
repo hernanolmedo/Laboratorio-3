@@ -1,53 +1,49 @@
 \documentclass{memoria}
 
-
 \begin{document}
-	\portada{Laboratorio 2 Organización de Computadores: Caché}{Hernán Olmedo}{Profesores: \\Felipe Garay,\\Erika Rosas,\\Nicolás Hidalgo\\Ayudante: \\Ian Mejias}{\today}
+	\portada{Laboratorio 3 Organización de Computadores: Pipeline}{Hernán Olmedo}{Profesores: \\Felipe Garay,\\Erika Rosas,\\Nicolás Hidalgo\\Ayudante: \\Ian Mejias}{\today}
 	\indices
 	
 	\capitulo{Introducción}{\bigskip\bigskip
-		Los computadores hoy en día juegan un papel preponderante en el desarrollo tecnológico y pese a su rápida evolución, las exigencias no se quedan atrás con el paso del tiempo y cada vez son más las áreas que exigen procesar grandes cantidades de datos en un tiempo reducido. Por ejemplo procesar los datos de una sonda espacial, áreas como las finanzas, la edición de gráficos, entre otras. Una de las partes claves en la rapidez de respuesta de un computador es el manejo de la memoria, en este informe trataremos la memoria de acceso rápido llamada caché, las configuraciones que esta puede tener y como esto influye en la rapidez del computador. \cite{enunciado} \bigskip
-		
-		En este laboratorio se solicita implementar 2 algoritmos de ordenamiento, uno iterativo y otro recursivo a elección. Estos deben ser implementados en lenguaje ensamblador para el procesador MIPS utilizando el simulador MARS, cada algoritmo constituye un programa y cada programa debe ser capaz de abrir un archivo de texto que contiene un número por línea, pasar estos números a memoria, ordenarlos y finalmente crear un nuevo archivo de texto con los números ordenados. Utilizando la herramienta Data Cache Simulator de MARS se deben probar las distintas configuraciones de caché y analizar los resultados.\bigskip
-		
-		Los algoritmos a implementar serán el Quicksort como recursivo y el Bubble Sort como iterativo. Para la implementación de estos algoritmos se utilizó el stack de MIPS para ordenar allí los números. Utilizando la herramienta Data Cache Simulator se obtienen los resultados que serán analizados en este informe.\bigskip
-		
-		Con la realización de este trabajo se busca comprobar empíricamente la materia vista en clases respecto a las configuraciones del cache, además de mejorar nuestras habilidades para programar en un lenguaje de muy bajo nivel como lo es el del procesador MIPS.\bigskip
-		
-		En el capítulo 2 se describen las configuraciones que puede tener el caché así como también conceptos claves en el entendimiento del cache y los algoritmos de ordenamiento. En el capítulo 3 se explica como fue llevado a cabo el desarrollo del trabajo. En el capítulo 4 se discuten los resultados obtenidos y se explican de acuerdo a la materia vista en clases y a investigación personal
+		Hoy en día se vive en un mundo globalizado, donde la información se propaga rápidamente por el mundo en todo ámbito, ya sea industrial, redes sociales, economía, investigación, etc. La informática juega un papel crucial, siendo la ciencia encargada de proveer los medios a través de los cuales se propaga y procesa dicha información, todas las actividades ligadas al uso de medios informáticos exigen la mayor rapidez de respuesta posible. Cada día estas exigencias van creciendo, aumentando la cantidad de datos a procesar y en el menor tiempo posible. Una de las herramientas de las que disponen los informáticos para aumentar la rapidez de respuesta en sus programas es el profiling o perfilaje que nos entrega información detallada del tiempo que está tomando ejecutarse un programa. En este laboratorio se utilizará esta herramienta para reducir el tiempo de ejecución de una función que calcula la tangente hiperbólica mediante el análisis del pipeline.\bigskip
+		El presente laboratorio requiere la implementación de la función tanh utilizando la serie de Taylor, se pide hacerlo en lenguaje C y con 3 decimales de precisión. Una vez implementada, se dibuja el pipeline identificando posibles hazards y posterior a esto se itera modificando el código hasta que ya no se encuentren hazards. En cada iteración se debe utilizar gprof, un profiler para sistemas operativos GNU y con este se debe calcular los tiempos que van tomando los distintos códigos para luego sacar conclusiones respecto a esto.\bigskip
+		El código será realizado en Ubuntu con el compilador GCC. El valor al cual se le va a calcular la tangente hiperbólica se debe introducir como argumento del ejecutable con la bandera "-n" espacio y el valor. Para manipular este argumento dentro del código se hace uso de la función getopt que facilita el análisis de los argumentos e identifica los errores al momento de ingresarlos. Además el informe es desarrollado en Latex y se utiliza un repositorio en Github para registrar los avances realizados.\bigskip
+		Al realizar este laboratorio se comprueba empíricamente, como afecta en el tiempo de ejecución el orden de las instrucciones en un código y las dependencias que se generan entre estas. Así se podrá tener un criterio para futuros proyectos a la hora programar, con el fin de reducir lo más posible el tiempo de ejecución.\bigskip
+		En el capítulo 2 se habla sobre el pipeline, sus etapas en el procesador MIPS y sobre los hazard. En el capítulo 3 se explica como fue llevado a cabo el desarrollo del trabajo. En el capítulo 4 se discuten los resultados obtenidos y se explican de acuerdo a la materia vista en clases y a investigación personal.
 		}
 	
 	\capitulo{Marco Teórico}{\bigskip\bigskip%sobre el pipeline, etapas del pipeline de mips y hazards
-		El pipeline es un técnica de implementación en la cual se traslapan las instrucciones durante la ejecución.\bigskip
+			El pipeline es un técnica de implementación en la cual se traslapan las instrucciones durante la ejecución.\bigskip
 		\seccion{Etapas del Pipeline}{\bigskip
 			En MIPS se tienen 5 etapas:\bigskip\bigskip
-			IF: En esta etapa se busca la instrucción en memoria.\bigskip\bigskip
-			ID: Se leen los registros mientras se decodifica la instrucción.\bigskip\bigskip
-			EX: Se ejecuta la operación de la instrucción o bien se calcula una dirección de memoria.\bigskip\bigskip
-			MEM: En esta etapa se accede a un operando que se encuentra en memoria.\bigskip\bigskip
+			IF: En esta etapa se busca la instrucción en memoria.\bigskip
+			ID: Se leen los registros mientras se decodifica la instrucción.\bigskip
+			EX: Se ejecuta la operación de la instrucción o bien se calcula una dirección de memoria.\bigskip
+			MEM: En esta etapa se accede a un operando que se encuentra en memoria.\bigskip
 			WB: Finalmente se escriben los resultados en un registro.\bigskip\bigskip
-
-			\bigskip\bigskip
 			}
-		\seccion{Hazard}{\bigskip
-			Los hazard son obstáculos que se producen durante la ejecución del pipeline cuando una instrucción no se puede ejecutar en el siguiente ciclo de reloj. Existen 3 tipos de hazard:\bigskip\bigskip
-			Hazard estructurales: Se producen cuando el hardware no puede soportar una combinación de instrucciones en un ciclo de reloj.\bigskip\bigskip
-			Hazard de datos: Se producen cuando una instrucción requiere de datos que aún no están disponibles.\bigskip\bigskip
-			Hazard de control: Se producen cuando se busca una instrucción pero esta no era la que se necesitaba ejecutar, el flujo  de ejecución de las instrucciones cambia.\bigskip\bigskip
-			\bigskip\bigskip
-			}
-			Forwarding: Método para resolver hazard de datos que mediante la utilización de buffers puede hacer uso de los datos sin  esperar a que esten en los registros o en memoria.
+		\seccion{Hazards}{\bigskip
+			Los hazards son obstáculos que se producen durante la ejecución del pipeline cuando una instrucción no se puede ejecutar en el siguiente ciclo de reloj. Existen 3 tipos de hazards:\bigskip\bigskip
+			Hazard Estructural: Estos se producen cuando el hardware no soporta una combinación de instrucciones.\bigskip
+			Hazard de Datos: Se producen cuando los datos que requiere una instrucción aún no están disponibles.\bigskip
+			Hazard de Control: Se producen cuando la instrucción buscada no es la que se tiene que ejecutar.\bigskip\bigskip
+			Forwarding: Técnica que permite resolver hazard de datos mediante la utilización de buffers. 
+			}					
 		}
 	
 	\capitulo{Desarrollo}{\bigskip\bigskip
 	
 		}
 	\capitulo{Discusiones de los resultados}{\bigskip\bigskip
+	% q hace cada salida, leer sobre resultados de gprof
 	}
 
 	\capitulo{Conclusión}{\bigskip\bigskip\bigskip
 		}
-
+	\nocite{enunciado}
+	\nocite{profiling}
+	\nocite{repo}
+	
 	\bibliografiasincita
 	
 	

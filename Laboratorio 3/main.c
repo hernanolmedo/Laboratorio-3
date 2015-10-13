@@ -1,21 +1,42 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
 //Recibe un double correspondiente al número al cual se le desea calcular la tanh
 //Retorna un double que viene a ser la aproximación de la tanh de x
 double tanh(double x){
-    double x3=x*(x*x);
-    double x5=x3*(x*x);
-    double x7=x5*(x*x);
-    double x9=x7*(x*x);
-    double x11=x9*(x*x);
-    double x13=x11*(x*x);
-    double x15=x13*(x*x);
-    double x17=x15*(x*x);
-    double x19=x17*(x*x);
-    double sum=x-0.333333*x3+0.133333*x5-0.053968*x7+0.021869*x9-0.00886325*x11+0.00359216*x13-0.00145389*x15+0.000604682*x17-0.00005291*x19;
-    return sum;
+	double t0,x3,t1,sum,x5,x7,x9,x11,x13,x15,x17,x19;
+
+    	   t0=x*x;	
+    	   x3=x*t0;
+    	   t1=0.333333*x3;
+    	   sum=x-t1;
+    	   x5=x3*t0;
+ 	   t1=0.133333*x5;
+	   sum=sum+t1;
+    	   x7=x5*t0;
+	   t1=0.053968*x7;
+	   sum=sum-t1;
+    	   x9=x7*t0;
+	   t1=0.021869*x9;
+	   sum=sum+t1;
+    	   x11=x9*t0;
+	   t1=0.00886325*x11;
+	   sum=sum-t1;
+    	   x13=x11*t0;
+	   t1=0.00359216*x13;
+	   sum=sum+t1;
+    	   x15=x13*t0;
+	   t1=0.00145389*x15;
+	   sum=sum-t1;
+    	   x17=x15*t0;
+	   t1=0.000604682*x17;
+	   sum=sum+t1;
+    	   x19=x17*t0;
+	   t1=0.00005291*x19;
+	   sum=sum-t1;
+
+    	   return sum;
 }
 //Recibe como argumento el número al cual se le quiere calcular la tanh con la bandera -n
 //Retorna 0 si no hubo ningun problema
@@ -26,7 +47,7 @@ int main(int argc,char **argv){
     char *nname="VALORES_N";
     char usage[]="usage: %s -n \"0 VALORES\"\n";
 	double x;
-	if(argc==1){printf("Sin argumentos. Ingrese argumentos de la forma: -n \"valor\"\n");}
+	if(argc==1||argc==2){printf("Sin argumentos. Ingrese argumentos de la forma: -n \"valor\"\n");}
     while((c=getopt(argc,argv,"n:"))!=-1){
         switch(c){
             case 'n':

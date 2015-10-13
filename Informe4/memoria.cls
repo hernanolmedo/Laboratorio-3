@@ -46,9 +46,9 @@
 
 
 % cargamos biblatex para la bibliografia
-%\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
-%\DeclareLanguageMapping{spanish}{spanish-apa}
-\usepackage[backend=bibtex]{biblatex}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+%\usepackage[backend=bibtex]{biblatex}
 \addbibresource{bibliografia.bib}
 
 % Con esto sabemos si debemos mostrar el nombre del capitulo o no en el header.

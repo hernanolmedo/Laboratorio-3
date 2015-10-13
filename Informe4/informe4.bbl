@@ -1,10 +1,10 @@
 % $ biblatex auxiliary file $
-% $ biblatex version 2.3 $
+% $ biblatex bbl format version 2.5 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
 %
 \begingroup
 \makeatletter
@@ -16,22 +16,62 @@
   {}
 \endgroup
 
-\entry{enunciado}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Garay}{G.}%
-     {Felipe}{F.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{GF1}
-  \strng{fullhash}{GF1}
-  \field{sortinit}{G}
-  \field{title}{Laboratorio 3 Organización de Computadores: Pipeline}
-  \field{year}{2015}
-\endentry
 
-\lossort
-\endlossort
-
+\refsection{0}
+  \sortlist{nyt}{nyt}
+    \entry{enunciado}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=ca2b2e7c5d2e42692111a1fa9845b45d}{Garay}{G\bibinitperiod}{Felipe}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ca2b2e7c5d2e42692111a1fa9845b45d}
+      \strng{fullhash}{ca2b2e7c5d2e42692111a1fa9845b45d}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Laboratorio 3 Organización de Computadores: Pipeline}
+      \field{year}{2015}
+    \endentry
+    \entry{repo}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=2c501bb38922e2456bfc2709213a236c}{Olmedo}{O\bibinitperiod}{Hernán}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2c501bb38922e2456bfc2709213a236c}
+      \strng{fullhash}{2c501bb38922e2456bfc2709213a236c}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Laboratorio-3}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://github.com/hernanolmedo/Laboratorio-3
+      \endverb
+    \endentry
+    \entry{profiling}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Internet; descargado 11-octubre-2015]}
+      \field{title}{Análisis de rendimiento de software --- Wikipedia{,} La enciclopedia libre}
+      \field{year}{2013}
+      \verb{url}
+      \verb https://es.wikipedia.org/w/index.php?title=An%C3%83%C2%A1lisis_de_rendimiento_de_software&oldid=69967834
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
 \endinput
+

@@ -44,31 +44,32 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>informe4.aux</file>
-      <file>informe4-blx.bib</file>
+      <file>informe4.bcf</file>
     </provides>
     <requires type="dynamic">
       <file>informe4.bbl</file>
     </requires>
     <requires type="static">
+      <file>blx-dm.def</file>
+      <file>apa.dbx</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
-      <file>numeric.bbx</file>
+      <file>apa.bbx</file>
       <file>standard.bbx</file>
-      <file>numeric.cbx</file>
+      <file>apa.cbx</file>
       <file>biblatex.cfg</file>
+      <file>spanish-apa.lbx</file>
       <file>spanish.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
-    <generic>bibtex</generic>
+    <generic>biber</generic>
     <cmdline>
-      <binary>bibtex</binary>
-      <option>-min-crossrefs 2</option>
+      <binary>biber</binary>
       <infile>informe4</infile>
     </cmdline>
     <input>
-      <file>informe4.aux</file>
+      <file>informe4.bcf</file>
     </input>
     <output>
       <file>informe4.bbl</file>
@@ -77,14 +78,10 @@
       <file>informe4.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>informe4.aux</file>
-      <file>informe4-blx.bib</file>
+      <file>informe4.bcf</file>
     </requires>
     <requires type="editable">
       <file>bibliografia.bib</file>
-    </requires>
-    <requires type="static">
-      <file>biblatex.bst</file>
     </requires>
   </external>
 </requests>
